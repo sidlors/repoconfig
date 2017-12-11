@@ -1,0 +1,23 @@
+server:
+  context-path: /park
+  port: 8888
+spring:
+  data:
+    mongodb:
+      host: ds133816.mlab.com
+      port: 33816
+      username: sngular
+      password: s|ngular
+      database: sngular
+  jackson:
+        serialization-inclusion: NON_NULL
+        serialization:
+            WRITE_DATES_AS_TIMESTAMPS: false
+eureka:
+  instance:
+    perferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
